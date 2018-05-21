@@ -1,0 +1,6 @@
+{
+    "require": {
+        "facebook/graph-sdk": "^5.6",
+        "twbs/bootstrap": "^4.1"
+    }
+}
