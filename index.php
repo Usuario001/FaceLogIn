@@ -6,7 +6,7 @@
  * Time: 12:10
  */
 include_once "config.php";
-$redirectURL = "http://localhost/FacebookLogin/fb-callback.php";
+$redirectURL = "https://quinielacapitalfutbol.com/publiza/facelogin/fb-callback.php";
 $permissions = ['email'];
 $loginURL = $helper->getLoginUrl($redirectURL, $permissions);
 echo $loginURL;
