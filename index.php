@@ -6,6 +6,12 @@
  * Time: 12:10
  */
 include_once "config.php";
+
+if (isset($_SESSION['access_token'])){
+    header('Location: home.php');
+    exit();
+}
+
 $redirectURL = "https://quinielacapitalfutbol.com/publiza/facelogin/fb-callback.php";
 $permissions = ['email'];
 $loginURL = $helper->getLoginUrl($redirectURL, $permissions);
@@ -16,7 +22,7 @@ echo $loginURL;
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0 ">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Log In</title>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
