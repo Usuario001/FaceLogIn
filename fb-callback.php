@@ -28,12 +28,14 @@ if (!$accessToken->isLongLived())
 $response = $FB->get('/me?fields=id,first_name,last_name, email, picture.type(large)', $accessToken);
 $userData = $response->getGraphNode()->asArray();
 
-echo "<pre>";
-var_dump($userData);
-
-echo "find";
+/**
+ * Prueba de respuesta
+ * echo "<pre>";
+ * var_dump($userData);
+ * echo "find";*
+ */
 
 $_SESSION['userData'] = $userData;
 $_SESSION['access_token'] = (string) $accessToken;
-//header('Location: home.php');
+header('Location: home.php');
 exit();
